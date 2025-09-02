@@ -1,6 +1,6 @@
-# 🛠 Timed Stop-Loss Remover EA for MetaTrader 5
+# Timed Stop-Loss Remover EA for MetaTrader 5
 
-A **MetaTrader 5 Expert Advisor (EA)** that temporarily removes stop-losses (SL) from all open positions at a specified **Start time** and restores them at a specified **End time**. Ideal for traders who want precise control over SLs during high-volatility periods such as the daily spread hour or specific market events.
+A **MetaTrader 5 Expert Advisor (EA)** that temporarily removes stop-losses (SLs) from all open positions at a specified **Start time** and restores them at a specified **End time**. Ideal for traders who want precise control over SLs during high-volatility periods such as the daily spread hour or specific market events.
 
 ---
 
