@@ -26,8 +26,8 @@ A **MetaTrader 5 Expert Advisor (EA)** that temporarily removes stop-losses (SL)
 > `Start = "15:30"` → Remove SLs at 3:30 PM
 > `End = "15:45"` → Restore SLs at 3:45 PM
 
-Important: 
-The EA uses the brokers time. 
+Important:<br>
+The EA uses the brokers time.<br>
 My prop firm (the5ers) uses UTC+3, so the default specified times are 23:50 (22:50 UTC+2) and 01:15 (00:15 UTC+2).
 
 ---
