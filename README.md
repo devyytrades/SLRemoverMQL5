@@ -68,6 +68,7 @@ MetaTrader 5\MQL5\Experts\
 
 ## 🎯 Recommended Use Cases
 
+* During Spread Hour, to avoid getting stopped out in an area price never reached
 * During **major news events** to avoid accidental SL hits
 * Temporary removal of SLs to **manage positions manually**
 
@@ -84,13 +85,4 @@ MetaTrader 5\MQL5\Experts\
 
 ## 🆘 Support
 
-For issues or feature requests, please create an **issue** in this repository.
-
----
-
-### ✅ Tips for a Professional Look
-
-* Use **emojis** for visual cues (like ✅, ⚠️, 🛠, 🎯)
-* Use **horizontal lines (`---`)** to separate sections
-* Use **bold** for important terms
-* Tables for parameters make input options clear
+For issues or feature requests, please create an **issue** in this repository or add me on Discord @iamdevyy.
