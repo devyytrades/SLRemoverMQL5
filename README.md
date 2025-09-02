@@ -1,80 +1,92 @@
-🛠 Timed Stop-Loss Remover EA for MetaTrader 5
+# 🛠 Timed Stop-Loss Remover EA for MetaTrader 5
 
-A MetaTrader 5 Expert Advisor (EA) that temporarily removes stop-losses (SL) from all open positions at a specified Start time and restores them at a specified End time. Ideal for traders who want precise control over SLs during high-volatility periods or specific market events.
+A **MetaTrader 5 Expert Advisor (EA)** that temporarily removes stop-losses (SL) from all open positions at a specified **Start time** and restores them at a specified **End time**. Ideal for traders who want precise control over SLs during high-volatility periods or specific market events.
 
-🔹 Features
+---
 
-✅ Remove SLs from all open positions at a custom time
+## 🔹 Features
 
-✅ Restore original SLs at a later custom time
+* ✅ Remove SLs from **all open positions** at a custom time
+* ✅ Restore original SLs at a later custom time
+* ✅ Works for **both BUY and SELL positions**
+* ✅ Preserves Take-Profit (TP) levels
+* ✅ Runs on **any chart**, affecting all symbols in your account
+* ✅ Fully configurable via **input parameters**
 
-✅ Works for both BUY and SELL positions
+---
 
-✅ Preserves Take-Profit (TP) levels
+## ⚙️ Input Parameters
 
-✅ Runs on any chart, affecting all symbols in your account
+| Parameter | Description                         |
+| --------- | ----------------------------------- |
+| `Start`   | Time to remove SLs (HH\:MM format)  |
+| `End`     | Time to restore SLs (HH\:MM format) |
 
-✅ Fully configurable via input parameters
+> **Example:**
+> `Start = "15:30"` → Remove SLs at 3:30 PM
+> `End = "15:45"` → Restore SLs at 3:45 PM
 
-⚙️ Input Parameters
-Parameter	Description
-Start	Time to remove SLs (HH:MM format)
-End	Time to restore SLs (HH:MM format)
+---
 
-Example:
-Start = "15:30" → Remove SLs at 3:30 PM
-End = "15:45" → Restore SLs at 3:45 PM
+## 📌 How It Works
 
-📌 How It Works
+1. Scans **all open positions** in your account.
+2. At `Start` time → sets SL to **0** (temporarily removed)
+3. Records the **original SL** for each position
+4. At `End` time → restores the original SLs while keeping TP unchanged
+5. Operates **once per tick** for accuracy
 
-Scans all open positions in your account.
+---
 
-At Start time → sets SL to 0 (temporarily removed)
+## 📥 Installation
 
-Records the original SL for each position
+1. Place the compiled `.ex5` EA into your MT5 `Experts` folder:
 
-At End time → restores the original SLs while keeping TP unchanged
-
-Operates once per tick for accuracy
-
-📥 Installation
-
-Place the compiled .ex5 EA into your MT5 Experts folder:
-
+```
 MetaTrader 5\MQL5\Experts\
+```
 
+2. Restart MT5 or refresh the Navigator panel
+3. Attach the EA to **any chart**
+4. Configure your desired **Start** and **End** times
 
-Restart MT5 or refresh the Navigator panel
+> ⚠️ Make sure times match your **broker server time**
 
-Attach the EA to any chart
+---
 
-Configure your desired Start and End times
+## 📝 Important Notes
 
-⚠️ Make sure times match your broker server time
+* The EA **affects all open positions**, not just the chart symbol
+* SL removal is **temporary** — original SLs are restored automatically
+* Test first on a **demo account** to ensure correct behavior
 
-📝 Important Notes
+---
 
-The EA affects all open positions, not just the chart symbol
+## 🎯 Recommended Use Cases
 
-SL removal is temporary — original SLs are restored automatically
+* During **major news events** to avoid accidental SL hits
+* Temporary removal of SLs to **manage positions manually**
 
-Test first on a demo account to ensure correct behavior
+---
 
-🎯 Recommended Use Cases
+## 💾 Releases
 
-During major news events to avoid accidental SL hits
+* Only the **compiled EA (`.ex5`)** is included in releases
+* Source code is **not included**
 
-Temporary removal of SLs to manage positions manually
+> Users can download the `.ex5` from the [Releases](https://github.com/) section of this repository
 
-💾 Releases
+---
 
-Only the compiled EA (.ex5) is included in releases
+## 🆘 Support
 
-Source code is not included
+For issues or feature requests, please create an **issue** in this repository.
 
-Users can download the .ex5 from the Releases
- section of this repository
+---
 
-🆘 Support
+### ✅ Tips for a Professional Look
 
-For issues or feature requests, please create an issue in this repository.
+* Use **emojis** for visual cues (like ✅, ⚠️, 🛠, 🎯)
+* Use **horizontal lines (`---`)** to separate sections
+* Use **bold** for important terms
+* Tables for parameters make input options clear
