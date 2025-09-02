@@ -1,73 +1,80 @@
-Timed Stop-Loss Remover EA for MetaTrader 5
+🛠 Timed Stop-Loss Remover EA for MetaTrader 5
 
-A simple yet powerful MetaTrader 5 Expert Advisor that temporarily removes stop-losses (SL) from all open positions at a specified time and restores them at a later specified time. Perfect for traders who want to manage SLs during specific market events or avoid accidental stops during high volatility periods.
+A MetaTrader 5 Expert Advisor (EA) that temporarily removes stop-losses (SL) from all open positions at a specified Start time and restores them at a specified End time. Ideal for traders who want precise control over SLs during high-volatility periods or specific market events.
 
-Features
+🔹 Features
 
-✅ Automatically removes SLs from all open positions at a customizable start time.
+✅ Remove SLs from all open positions at a custom time
 
-✅ Restores original SLs at a customizable end time.
+✅ Restore original SLs at a later custom time
 
-✅ Works for both BUY and SELL positions.
+✅ Works for both BUY and SELL positions
 
-✅ Preserves Take-Profit (TP) levels while modifying SLs.
+✅ Preserves Take-Profit (TP) levels
 
-✅ Operates on all symbols in your account, regardless of the chart it’s attached to.
+✅ Runs on any chart, affecting all symbols in your account
 
-✅ Fully configurable via input parameters.
+✅ Fully configurable via input parameters
 
-Input Parameters
+⚙️ Input Parameters
 Parameter	Description
-Start	Time when the EA removes stop-losses (format: HH:MM).
-End	Time when the EA restores the original stop-losses (format: HH:MM).
+Start	Time to remove SLs (HH:MM format)
+End	Time to restore SLs (HH:MM format)
 
 Example:
 Start = "15:30" → Remove SLs at 3:30 PM
 End = "15:45" → Restore SLs at 3:45 PM
 
-How It Works
+📌 How It Works
 
-The EA scans all open positions in your MT5 account.
+Scans all open positions in your account.
 
-At the Start time, it temporarily sets the SL of every position to 0, effectively removing them.
+At Start time → sets SL to 0 (temporarily removed)
 
-It records the original SL of each position in memory.
+Records the original SL for each position
 
-At the End time, it restores the original SLs while keeping the TP unchanged.
+At End time → restores the original SLs while keeping TP unchanged
 
-The EA runs on each tick and will only modify positions once per session.
+Operates once per tick for accuracy
 
-Installation
+📥 Installation
 
-Copy the compiled .ex5 file into your MT5 Experts folder:
+Place the compiled .ex5 EA into your MT5 Experts folder:
 
 MetaTrader 5\MQL5\Experts\
 
 
-Restart MT5 or refresh the Navigator panel.
+Restart MT5 or refresh the Navigator panel
 
-Attach the EA to any chart. It will work across all symbols in your account.
+Attach the EA to any chart
 
-Set your desired Start and End times in the EA input parameters.
+Configure your desired Start and End times
 
-Important Notes
+⚠️ Make sure times match your broker server time
 
-The EA will affect all open positions, regardless of the symbol.
+📝 Important Notes
 
-Make sure your Start and End times are set according to the server time (MT5 platform time).
+The EA affects all open positions, not just the chart symbol
 
-The EA does not delete stop-losses permanently — original SLs are restored at the specified End time.
+SL removal is temporary — original SLs are restored automatically
 
-Always test on a demo account first to ensure it works with your broker and trading setup.
+Test first on a demo account to ensure correct behavior
 
-Screenshots
+🎯 Recommended Use Cases
 
-(Optional: add screenshots of input settings and the EA running on a chart)
+During major news events to avoid accidental SL hits
 
-Support
+Temporary removal of SLs to manage positions manually
 
-If you encounter any issues or have feature requests, please create an issue in this repository.
+💾 Releases
 
-License
+Only the compiled EA (.ex5) is included in releases
 
-This EA is free to use for personal trading purposes. Source code may be kept private in the repository.
+Source code is not included
+
+Users can download the .ex5 from the Releases
+ section of this repository
+
+🆘 Support
+
+For issues or feature requests, please create an issue in this repository.
