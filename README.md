@@ -76,9 +76,6 @@ MetaTrader 5\MQL5\Experts\
 
 ## 💾 Releases
 
-* Only the **compiled EA (`.ex5`)** is included in releases
-* Source code is **not included**
-
 > Users can download the `.ex5` from the [Releases](https://github.com/) section of this repository
 
 ---
